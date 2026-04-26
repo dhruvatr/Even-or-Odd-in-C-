@@ -1,0 +1,18 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() {
+    int n;
+    cout<<"Enter number: ";
+    cin>>n;
+
+    int root = sqrt(n+1);
+
+    if(root * root == n+1)
+        cout<<"Sunny Number";
+    else
+        cout<<"Not a Sunny Number";
+
+    return 0;
+}

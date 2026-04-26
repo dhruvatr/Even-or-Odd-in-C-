@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n, square, sum = 0;
+    cin >> n;
+
+    square = n * n;
+
+    while (square > 0) {
+        sum += square % 10;
+        square /= 10;
+    }
+
+    if (sum == n)
+        cout << "Neon Number";
+    else
+        cout << "Not Neon Number";
+
+    return 0;
+}

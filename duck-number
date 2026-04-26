@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int num, temp;
+    bool hasZero = false;
+
+    cout << "Enter number: ";
+    cin >> num;
+
+    temp = num;
+
+    while (temp > 0) {
+        if (temp % 10 == 0) {
+            hasZero = true;
+            break;
+        }
+        temp /= 10;
+    }
+
+    if (hasZero)
+        cout << "Duck Number";
+    else
+        cout << "Not a Duck Number";
+
+    return 0;
+}

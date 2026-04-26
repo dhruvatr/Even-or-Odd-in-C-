@@ -1,0 +1,33 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() {
+    int n, temp, count = 0, sum = 0;
+
+    cout << "Enter number: ";
+    cin >> n;
+
+    temp = n;
+
+    while (temp > 0) {
+        count++;
+        temp /= 10;
+    }
+
+    temp = n;
+
+    while (temp > 0) {
+        int digit = temp % 10;
+        sum += pow(digit, count);
+        count--;
+        temp /= 10;
+    }
+
+    if (sum == n)
+        cout << "Disarium Number";
+    else
+        cout << "Not Disarium";
+
+    return 0;
+}
