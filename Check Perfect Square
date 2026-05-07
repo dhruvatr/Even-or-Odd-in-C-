@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+    int num;
+    cout << "Enter number: ";
+    cin >> num;
+
+    int i = 1;
+    bool found = false;
+
+    while(i * i <= num){
+        if(i * i == num){
+            found = true;
+            break;
+        }
+        i++;
+    }
+
+    if(found)
+        cout << "Perfect Square";
+    else
+        cout << "Not Perfect Square";
+
+    return 0;
+}
