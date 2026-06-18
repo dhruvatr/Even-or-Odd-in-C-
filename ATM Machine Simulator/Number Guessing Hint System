@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int secret = 50, guess;
+
+    cout << "Guess a number (1-100): ";
+    cin >> guess;
+
+    if(guess == secret)
+        cout << "Correct!";
+    else if(abs(secret - guess) <= 5)
+        cout << "Very Close!";
+    else
+        cout << "Far away!";
+
+    return 0;
+}

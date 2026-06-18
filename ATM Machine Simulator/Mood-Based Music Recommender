@@ -1,0 +1,58 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int choice;
+
+    cout << "===== Mood Based Music Recommender =====\n\n";
+
+    cout << "Choose Your Mood:\n";
+    cout << "1. Happy\n";
+    cout << "2. Sad\n";
+    cout << "3. Angry\n";
+    cout << "4. Chill\n";
+    cout << "5. Motivated\n\n";
+
+    cout << "Enter choice: ";
+    cin >> choice;
+
+    cout << "\nRecommended Songs:\n";
+
+    switch(choice) {
+
+        case 1:
+            cout << "- Happy - Pharrell Williams\n";
+            cout << "- On Top Of The World - Imagine Dragons\n";
+            cout << "- Can't Stop The Feeling - Justin Timberlake\n";
+            break;
+
+        case 2:
+            cout << "- Someone Like You - Adele\n";
+            cout << "- Let Her Go - Passenger\n";
+            cout << "- Fix You - Coldplay\n";
+            break;
+
+        case 3:
+            cout << "- Believer - Imagine Dragons\n";
+            cout << "- Warriors - Imagine Dragons\n";
+            cout << "- Numb - Linkin Park\n";
+            break;
+
+        case 4:
+            cout << "- Sunset Lover - Petit Biscuit\n";
+            cout << "- Heat Waves - Glass Animals\n";
+            cout << "- Perfect - Ed Sheeran\n";
+            break;
+
+        case 5:
+            cout << "- Hall Of Fame - The Script\n";
+            cout << "- Stronger - Kanye West\n";
+            cout << "- Lose Yourself - Eminem\n";
+            break;
+
+        default:
+            cout << "Invalid choice!";
+    }
+
+    return 0;
+}

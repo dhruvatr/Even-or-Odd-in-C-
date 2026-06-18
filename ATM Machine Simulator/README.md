@@ -1,0 +1,1 @@
+The ATM Machine Simulator is a simple C++ console application that mimics the basic operations of a real ATM machine. It allows users to perform banking tasks such as checking account balance, depositing money, and withdrawing cash through a menu-driven interface.

@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int classes, attended;
+    float percentage;
+
+    cout << "Enter total classes: ";
+    cin >> classes;
+
+    cout << "Enter attended classes: ";
+    cin >> attended;
+
+    percentage = (attended * 100.0) / classes;
+
+    cout << "Attendance Percentage = " << percentage << "%\n";
+
+    if(percentage >= 90)
+        cout << "Excellent Attendance!";
+    else if(percentage >= 75)
+        cout << "Good Attendance!";
+    else
+        cout << "Low Attendance Warning!";
+
+    return 0;
+}

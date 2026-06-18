@@ -1,0 +1,81 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int x = 0, y = 0;
+    char move;
+
+    bool hasKey = false;
+    bool treasureFound = false;
+
+    cout << "====== TREASURE HUNT GAME ======\n";
+    cout << "Find the treasure and escape!\n";
+
+    while (true) {
+
+        cout << "\nCurrent Position: (" << x << "," << y << ")\n";
+        cout << "Move using:\n";
+        cout << "W = Up\nS = Down\nA = Left\nD = Right\n";
+        cout << "Enter move: ";
+        cin >> move;
+
+        // Movement
+        if (move == 'W' || move == 'w')
+            y++;
+
+        else if (move == 'S' || move == 's')
+            y--;
+
+        else if (move == 'A' || move == 'a')
+            x--;
+
+        else if (move == 'D' || move == 'd')
+            x++;
+
+        else {
+            cout << "Invalid move!\n";
+            continue;
+        }
+
+        // Trap location
+        if (x == 1 && y == 1) {
+            cout << "\nYou stepped on a TRAP!\n";
+            cout << "GAME OVER!\n";
+            break;
+        }
+
+        // Key location
+        if (x == 2 && y == 0 && !hasKey) {
+            hasKey = true;
+            cout << "\nYou found a KEY!\n";
+        }
+
+        // Treasure location
+        if (x == 3 && y == 2) {
+
+            if (hasKey) {
+                treasureFound = true;
+                cout << "\nYou found the TREASURE!\n";
+                cout << "YOU WIN!\n";
+                break;
+            }
+            else {
+                cout << "\nTreasure chest is locked!\n";
+                cout << "Find the key first.\n";
+            }
+        }
+
+        // Boundary
+        if (x < 0 || y < 0 || x > 3 || y > 3) {
+            cout << "\nYou hit the boundary wall!\n";
+
+            // Bring player back
+            if (x < 0) x = 0;
+            if (y < 0) y = 0;
+            if (x > 3) x = 3;
+            if (y > 3) y = 3;
+        }
+    }
+
+    return 0;
+}

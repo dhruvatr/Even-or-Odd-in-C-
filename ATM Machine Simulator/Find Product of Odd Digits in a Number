@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n, digit, product = 1;
+    cin >> n;
+
+    while (n > 0) {
+        digit = n % 10;
+
+        if (digit % 2 != 0)
+            product *= digit;
+
+        n /= 10;
+    }
+
+    cout << product;
+
+    return 0;
+}

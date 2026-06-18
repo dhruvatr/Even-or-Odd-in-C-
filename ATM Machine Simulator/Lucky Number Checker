@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n;
+
+    cout << "Enter a number: ";
+    cin >> n;
+
+    if(n % 7 == 0)
+        cout << "Super Lucky Number!";
+    else if(n % 2 == 0)
+        cout << "Lucky Number!";
+    else
+        cout << "Unlucky Number!";
+
+    return 0;
+}

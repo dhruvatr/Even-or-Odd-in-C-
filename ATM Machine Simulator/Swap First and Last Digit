@@ -1,0 +1,30 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() {
+    int n, first, last, digits, middle, result;
+
+    cout << "Enter a number: ";
+    cin >> n;
+
+    last = n % 10;
+
+    int temp = n;
+    digits = 0;
+
+    while(temp > 0) {
+        temp /= 10;
+        digits++;
+    }
+
+    first = n / pow(10, digits - 1);
+
+    middle = (n % (int)pow(10, digits - 1)) / 10;
+
+    result = last * pow(10, digits - 1) + middle * 10 + first;
+
+    cout << "After swapping = " << result;
+
+    return 0;
+}

@@ -1,0 +1,28 @@
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+
+using namespace std;
+
+int main() {
+    
+    srand(time(0)); // Generates different random numbers each time
+
+    int dice;
+
+    char choice;
+
+    do {
+        dice = rand() % 6 + 1; // Random number between 1 and 6
+
+        cout << "\n🎲 Dice Rolled: " << dice << endl;
+
+        cout << "Roll again? (y/n): ";
+        cin >> choice;
+
+    } while(choice == 'y' || choice == 'Y');
+
+    cout << "\nGame Ended!" << endl;
+
+    return 0;
+}

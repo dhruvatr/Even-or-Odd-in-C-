@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n;
+
+    cout << "Enter a number: ";
+    cin >> n;
+
+    cout << n;
+
+    int temp = n;
+
+    while(temp > 0) {
+        cout << temp % 10;
+        temp /= 10;
+    }
+
+    return 0;
+}
